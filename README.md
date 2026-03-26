@@ -1,6 +1,6 @@
 # Cdataset: Drug–Disease Interaction Dataset from PREDICT
 
-## 📌 Overview
+##  Overview
 
 **Cdataset** is a benchmark dataset for **drug–disease interaction prediction**, derived from the PREDICT framework proposed by Gottlieb et al. (2011).
 
@@ -12,7 +12,7 @@ The dataset integrates drug similarity, disease similarity, and known drug–dis
 
 ---
 
-## 📊 Dataset Statistics
+##  Dataset Statistics
 
 | Item                   | Value |
 | ---------------------- | ----- |
@@ -23,7 +23,7 @@ The dataset integrates drug similarity, disease similarity, and known drug–dis
 
 ---
 
-## 🧬 Data Source
+##  Data Source
 
 This dataset is derived from:
 
@@ -47,7 +47,7 @@ The original data combines multiple biomedical sources including:
 
 ---
 
-## 🏗 Dataset Structure
+##  Dataset Structure
 
 ```id="s0x1fm"
 Cdataset/
@@ -58,7 +58,7 @@ Cdataset/
 
 ---
 
-## 📄 File Description
+##  File Description
 
 ### 1. DiDrA.csv
 
@@ -93,61 +93,7 @@ drug_id, disease_id
 
 ---
 
-## ⚙️ Usage
-
-### 🔹 Task
-
-Given:
-
-* Drug similarity matrix **S_d**
-* Disease similarity matrix **S_s**
-* Known interactions **A**
-
-Predict unknown drug–disease associations.
-
----
-
-### 🔹 Example (Python)
-
-```python id="m2r8q1"
-import pandas as pd
-
-interactions = pd.read_csv("DiDrA.csv")
-drug_sim = pd.read_csv("DrugSim.csv", index_col=0)
-disease_sim = pd.read_csv("DiseaseSim.csv", index_col=0)
-
-print(interactions.head())
-```
-
----
-
-## 🧠 Task Formulation
-
-The problem can be formulated as:
-
-* **Link Prediction** in a bipartite graph
-* **Matrix Completion** problem
-
-Goal:
-Predict missing entries in interaction matrix **A ∈ R^(|D| × |S|)**
-
----
-
-## 📈 Evaluation Protocol
-
-Common evaluation metrics:
-
-* AUC (Area Under ROC Curve)
-* AUPR (Area Under Precision-Recall Curve)
-
-Evaluation strategies:
-
-* K-fold cross-validation
-* Leave-one-out validation
-
----
-
-## ⚠️ Notes
+##  Notes
 
 * The dataset is **sparse** (few known interactions vs. many unknown pairs)
 * Negative samples are not explicitly provided
@@ -158,7 +104,7 @@ Evaluation strategies:
 
 ---
 
-## 🚀 Recommended Use Cases
+##  Recommended Use Cases
 
 * Drug repurposing
 * Biomedical link prediction
@@ -167,23 +113,16 @@ Evaluation strategies:
 
 ---
 
-## 📜 License
+##  License
 
 This dataset follows the licensing terms of the original data sources.
 It is intended for **research and academic use only**.
 
 ---
 
-## 🤝 Acknowledgements
+##  Acknowledgements
 
 We thank the authors of the PREDICT model and the maintainers of biomedical databases used in constructing this dataset.
 
 ---
 
-## 📬 Contact
-
-* Name: [Your Name]
-* Affiliation: [Your University]
-* Email: [[your.email@example.com](mailto:your.email@example.com)]
-
----
