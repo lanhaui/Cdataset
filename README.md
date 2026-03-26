@@ -18,7 +18,6 @@ The dataset integrates drug similarity, disease similarity, and known drug–dis
 | ---------------------- | ----- |
 | Number of drugs        | 663   |
 | Number of diseases     | 409   |
-| Number of proteins     | 993   |
 | Number of interactions | 2532  |
 
 ---
